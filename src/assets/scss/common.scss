@@ -1,0 +1,33 @@
+li {
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar{
+  width: 6px;
+  height: 8px;
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+}
+
+
+// 布局
+.section-top {
+  margin-bottom: 20px;
+}
+.section-bottom {
+  .btn-list {
+    margin-bottom: 10px;
+  }
+}
+.title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  border-left: 5px solid #3b86e0;
+  padding-left: 8px;
+}

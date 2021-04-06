@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+/dist/
+packages/**/*.tgz
+packages/**/lib/*.js
+/package-lock.json
+# 编辑器描述文件
+.idea
+.vscode
+/yarn.lock
