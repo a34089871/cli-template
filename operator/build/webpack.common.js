@@ -1,5 +1,6 @@
 const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 const fs = require("fs");
 // 获取当前工作目录
@@ -34,17 +35,17 @@ module.exports = (options) => {
     stats,
     module: {
       rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          loader: 'eslint-loader',
-          enforce: 'pre',
-          options: {
-            fix: true,
-            cache: true,
-            formatter: require('eslint-friendly-formatter')
-          }
-        },
+        // {
+        //   test: /\.js$/,
+        //   exclude: /node_modules/,
+        //   loader: 'eslint-loader',
+        //   enforce: 'pre',
+        //   options: {
+        //     fix: true,
+        //     cache: true,
+        //     formatter: require('eslint-friendly-formatter')
+        //   }
+        // },
         {
           oneOf: [
             {
@@ -92,6 +93,13 @@ module.exports = (options) => {
     },
     plugins: [
       new VueLoaderPlugin(),
+      new ESLintPlugin({
+        fix: true, // 启用ESLint自动修复功能
+        extensions: ['js', 'jsx'],
+        context: resolve('src'), // 文件根目录
+        exclude: '/node_modules/',// 指定要排除的文件/目录
+        cache: true //缓存
+      }),
       ...plugins
     ],
     optimization
