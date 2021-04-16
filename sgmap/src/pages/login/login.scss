@@ -1,0 +1,190 @@
+html,
+body {
+  height: 100%;
+}
+
+@import "../../assets/scss/layout/flex";
+
+.login {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../static/login/loginBg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .layout {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+
+    .wrap {
+      position: absolute;
+      top: 120px;
+      right: 0;
+      width: 530px;
+      height: 640px;
+      padding: 30px;
+      border-radius: 7px;
+      background-color: #f1f6ff;
+      box-shadow: 0 7px 49px 0 rgba(2, 8, 22, 0.5);
+      opacity: 0.85;
+      margin-left: 160px;
+
+      .form-title {
+        display: block;
+        width: 100%;
+        font-weight: 600;
+        font-size: 28px;
+        padding-bottom: 25px;
+        text-align: center;
+        color: #404040;
+        letter-spacing: 3px;
+      }
+
+      .form-title-line {
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #2daac9;
+      }
+
+      .sg-form-item {
+        margin-bottom: 15px;
+
+        .sg-input {
+          height: 50px;
+          line-height: 50px;
+          border-radius: 6px;
+          border-color: #fff;
+          margin-top: 10px;
+        }
+
+        .sg-btn {
+          width: 100%;
+          height: 50px;
+          background-color: #b2b2b2;
+          border-color: #b2b2b2;
+          font-size: 20px;
+          font-weight: 600;
+          letter-spacing: 2px;
+        }
+
+        .sg-select-selection {
+          height: 50px;
+          line-height: 50px;
+          border-radius: 6px;
+          border-color: #fff;
+
+          .sg-select-selected-value {
+            height: 50px;
+            line-height: 50px;
+          }
+        }
+
+        .is-login {
+          background-color: #2daac9;
+          border-color: #2daac9;
+        }
+
+        .flex {
+          .flex-item {
+            > label {
+              cursor: pointer;
+              color: #404040;
+            }
+
+            &:last-child {
+              cursor: pointer;
+              text-align: right;
+              color: #f58c66;
+            }
+          }
+        }
+      }
+
+      .info-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        color: #999;
+        // margin-top: 50px;
+        .way {
+          display: inline-flex;
+          align-items: center;
+
+          &::before {
+            content: '';
+            width: 114px;
+            height: 1px;
+            background-color: #cfd0d3;
+            margin-right: 15px;
+          }
+
+          &::after {
+            content: '';
+            width: 114px;
+            height: 1px;
+            background-color: #cfd0d3;
+            margin-left: 15px;
+          }
+        }
+
+        .contact-layout {
+          width: 100%;
+          text-align: center;
+          color: #404040;
+          margin-top: 40px;
+          margin-bottom: 30px;
+          border-bottom: 1px solid #cfd0d3;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+.forgetPassModal {
+  .sg-modal-header-inner {
+    background: #213751;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .sg-modal-close {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    color: #f3f5f7 !important;
+  }
+}
+
+@media (min-width: 0) and (max-width: 1500px) {
+  .login {
+    .layout {
+      .wrap {
+        top: 100px;
+        width: 480px;
+        height: 620px;
+
+        .info-layout {
+          margin-top: 25px;
+
+          .contact-layout {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}

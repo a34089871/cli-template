@@ -1,0 +1,12 @@
+//布局通用样式
+@import "./layout/flex.scss";
+
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+
+  #mainProject {
+    height: 100%;
+  }
+}

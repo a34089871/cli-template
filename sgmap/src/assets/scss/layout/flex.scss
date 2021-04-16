@@ -1,0 +1,213 @@
+/* 定义为flexbox的"父元素,任何一个容器都可以指定为 Flex 布局。" */
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+//行内元素也可以使用 Flex 布局。
+.flex-inline {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+//定义主轴方向
+
+/* 指定主轴的伸缩流方向是纵向的（起点在上边，默认） */
+.flex-col {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* 指定主轴的伸缩流方向是纵向的（起点在下边边） */
+.flex-col-rev {
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+/* 指定主轴的伸缩流方向是横向的（起点在左边，默认） */
+.flex-row {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+/* 指定主轴的伸缩流方向是横向的（起点在右边） */
+.flex-row-rev {
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+//定义如果一条轴线排不下，如何换行
+
+// 默认不换行
+.flex-nowrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+/* 换行，第一行在上方 */
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* 换行，第一行在下方 */
+.flex-wrap-reverse {
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+//定义主轴的对齐方式
+
+/* 左对齐 */
+.flex-main-start {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+/* 居中 */
+.flex-main-center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* 右对齐 */
+.flex-main-end {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+/* 两端对齐 */
+.flex-main-between {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* 每个项目两侧的间隔相等 */
+.flex-main-around {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/* 定义交叉轴对齐方式 */
+// 交叉轴的起点对齐
+.flex-cross-start {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+//交叉轴的终点对齐
+.flex-cross-end {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+//交叉轴的中点对齐
+.flex-cross-center {
+  -webkit-align-items: center;
+  align-items: center;
+}
+//项目的第一行文字的基线对齐
+.flex-cross-baseline {
+  -webkit-align-items: baseline;
+  align-items: baseline;
+}
+//如果项目未设置高度或设为auto，将占满整个容器的高度。
+.flex-cross-stretch {
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+//定义常用布局
+
+/* 垂直居中 */
+.flex-center {
+  /* 子元素沿主轴对齐方式居中 */
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  /* 子元素沿交叉轴对齐方式居中 */
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+//flex-grow, flex-shrink 和 flex-basis的简写,默认0 1 auto
+//建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值
+
+/* 给"子元素"赋予自由伸缩的能力 */
+.flex-item {
+  -webkit-flex: 1;
+  flex: 1;
+
+  /* 在旧版的规范中，使用比例伸缩布局时，子元素的内容长短不同会导致无法“等分”，这个时候，我们需要给子元素设置一个“width:0%”来解决问题 */
+
+  /* 不要给flexbox里的子元素设置“margin:auto”的属性，在部分安卓机下，它会导致该元素的宽度撑开到100%占位 */
+  width: 0;
+}
+
+//项目占据主轴空间，常用尺寸
+.flex-col-100 {
+  flex: 0 0 100%;
+}
+
+.flex-col-90 {
+  flex: 0 0 90%;
+}
+
+.flex-col-80 {
+  flex: 0 0 80%;
+}
+
+.flex-col-70 {
+  flex: 0 0 70%;
+}
+
+.flex-col-60 {
+  flex: 0 0 60%;
+}
+
+.flex-col-50 {
+  flex: 0 0 50%;
+}
+
+.flex-col-40 {
+  flex: 0 0 40%;
+}
+
+.flex-col-33 {
+  flex: 0 0 33.3333%;
+}
+
+.flex-col-30 {
+  flex: 0 0 30%;
+}
+
+.flex-col-25 {
+  flex: 0 0 25%;
+}
+
+.flex-col-20 {
+  flex: 0 0 20%;
+}
+
+.flex-col-10 {
+  flex: 0 0 10%;
+}
+
+/* 单个项目有与其他项目不一样的对齐方式 */
+.flex-item-start {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+.flex-item-center {
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+.flex-item-end {
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+.flex-jcsb {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
